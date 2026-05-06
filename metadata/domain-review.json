@@ -1,0 +1,73 @@
+{
+  "repo": "tidal-ui-chart-runner",
+  "language": "Lua",
+  "category": "Frontend apps",
+  "goal": "Develop a Lua command-oriented project for chart scenarios with deny and allow fixtures, explainable decision traces, and synthetic fixtures only.",
+  "review_model": {
+    "terms": [
+      "view drift",
+      "state pressure",
+      "layout risk",
+      "interaction cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "view drift",
+      "signal": 44,
+      "slack": 44,
+      "drag": 10,
+      "confidence": 86,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state pressure",
+      "signal": 58,
+      "slack": 25,
+      "drag": 16,
+      "confidence": 80,
+      "score": 173,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "layout risk",
+      "signal": 63,
+      "slack": 26,
+      "drag": 16,
+      "confidence": 78,
+      "score": 182,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "interaction cost",
+      "signal": 81,
+      "slack": 40,
+      "drag": 23,
+      "confidence": 65,
+      "score": 198,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "view drift",
+      "signal": 86,
+      "slack": 30,
+      "drag": 15,
+      "confidence": 75,
+      "score": 232,
+      "lane": "ship"
+    }
+  ]
+}
