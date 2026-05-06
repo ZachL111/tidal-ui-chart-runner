@@ -63,3 +63,9 @@ lua tests/test_policy.lua
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-tidal-ui-chart-detail.ps1
 
 lua tests/test_domain_review.lua
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-tidal-ui-chart-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-tidal-ui-chart-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
